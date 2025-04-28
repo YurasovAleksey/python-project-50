@@ -1,11 +1,11 @@
+from gendiff.formatters import plain, stylish
 from gendiff.parsers import parse_file
 
 
-def generate_diff(file_path1, file_path2, format_name='stylish'):
-    data1 = parse_file(file_path1)
-    data2 = parse_file(file_path2)
-    diff = build_diff(data1, data2)
-    return format_diff(diff, format_name)
+def format_diff(diff, format_name):
+    if format_name == 'plain':
+        return plain.format(diff)
+    return stylish.format(diff)
 
 
 def build_diff(data1, data2):
@@ -34,6 +34,8 @@ def build_diff(data1, data2):
     return result
 
 
-def format_diff(diff, format_name):
-    from gendiff.formatters import stylish
-    return stylish.format(diff)
+def generate_diff(file_path1, file_path2, format_name='stylish'):
+    data1 = parse_file(file_path1)
+    data2 = parse_file(file_path2)
+    diff = build_diff(data1, data2)
+    return format_diff(diff, format_name)
