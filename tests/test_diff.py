@@ -2,12 +2,14 @@ import pytest
 import os
 from gendiff import generate_diff
 
-def get_fixture_path(file_name):
-    return os.path.join('tests', 'fixtures', file_name)
+def get_fixture_path(*args):
+    return os.path.join('tests', 'fixtures', *args)
 
 TEST_CASES = [
-    ('file1.json', 'file2.json', 'expected_json.txt'),
-    ('file1.yaml', 'file2.yaml', 'expected_yaml.txt')
+    ('flat/file1.json', 'flat/file2.json', 'flat/expected.txt'),
+    ('flat/file1.yaml', 'flat/file2.yaml', 'flat/expected.txt'),
+    ('nested/file_tree1.json', 'nested/file_tree2.json', 'nested/expected.txt'),
+    ('nested/file_tree1.yaml', 'nested/file_tree2.yaml', 'nested/expected.txt')
 ]
 
 @pytest.mark.parametrize('file1, file2, expected', TEST_CASES)
