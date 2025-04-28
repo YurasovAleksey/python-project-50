@@ -9,5 +9,8 @@
 ### Differences in yaml format files:
 [![asciicast](https://asciinema.org/a/xgr7Hhiok8eaZSuYVadMM4IXr.svg)](https://asciinema.org/a/xgr7Hhiok8eaZSuYVadMM4IXr)
 
-### Recursive comparison:
+### Recursive comparison (stylish format):
 [![asciicast](https://asciinema.org/a/xyhMYwEhX5s1u2l4ywecawkRc.svg)](https://asciinema.org/a/xyhMYwEhX5s1u2l4ywecawkRc)
+
+### Recursive comparison (plain format):
+[![asciicast](https://asciinema.org/a/par1bGlk46Zr2rJYDCdnMLTVM.svg)](https://asciinema.org/a/par1bGlk46Zr2rJYDCdnMLTVM)
