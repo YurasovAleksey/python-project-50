@@ -14,3 +14,6 @@
 
 ### Recursive comparison (plain format):
 [![asciicast](https://asciinema.org/a/par1bGlk46Zr2rJYDCdnMLTVM.svg)](https://asciinema.org/a/par1bGlk46Zr2rJYDCdnMLTVM)
+
+### Recursive comparison (json format):
+[![asciicast](https://asciinema.org/a/SMsAzhVlI06XKtycPwweMbRNU.svg)](https://asciinema.org/a/SMsAzhVlI06XKtycPwweMbRNU)

@@ -10,10 +10,14 @@ TEST_CASES = [
     ('flat/file1.yaml', 'flat/file2.yaml', 'stylish', 'flat/expected.txt'),
     ('flat/file1.json', 'flat/file2.json', 'plain', 'flat/expected_plain.txt'),
     ('flat/file1.yaml', 'flat/file2.yaml', 'plain', 'flat/expected_plain.txt'),
+    ('flat/file1.json', 'flat/file2.json', 'json', 'flat/expected.json'),
+    ('flat/file1.yaml', 'flat/file2.yaml', 'json', 'flat/expected.json'),
     ('nested/file_tree1.json', 'nested/file_tree2.json', 'stylish', 'nested/expected.txt'),
     ('nested/file_tree1.yaml', 'nested/file_tree2.yaml', 'stylish', 'nested/expected.txt'),
     ('nested/file_tree1.json', 'nested/file_tree2.json', 'plain', 'nested/expected_plain.txt'),
-    ('nested/file_tree1.yaml', 'nested/file_tree2.yaml', 'plain', 'nested/expected_plain.txt')
+    ('nested/file_tree1.yaml', 'nested/file_tree2.yaml', 'plain', 'nested/expected_plain.txt'),
+    ('nested/file_tree1.json', 'nested/file_tree2.json', 'json', 'nested/expected.json'),
+    ('nested/file_tree1.yaml', 'nested/file_tree2.yaml', 'json', 'nested/expected.json')
 ]
 
 @pytest.mark.parametrize('file1, file2, format_name, expected', TEST_CASES)
