@@ -8,3 +8,6 @@
 
 ### Differences in yaml format files:
 [![asciicast](https://asciinema.org/a/xgr7Hhiok8eaZSuYVadMM4IXr.svg)](https://asciinema.org/a/xgr7Hhiok8eaZSuYVadMM4IXr)
+
+### Recursive comparison:
+[![asciicast](https://asciinema.org/a/xyhMYwEhX5s1u2l4ywecawkRc.svg)](https://asciinema.org/a/xyhMYwEhX5s1u2l4ywecawkRc)
