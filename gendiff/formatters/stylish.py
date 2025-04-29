@@ -1,6 +1,7 @@
 def format(diff, indent=0):
+    INDNT = indent + 4
     lines = ['{']
-    spaces = ' ' * (indent + 4)
+    spaces = ' ' * INDNT
 
     for key, node in sorted(diff.items()):
         prefix = {
@@ -12,18 +13,18 @@ def format(diff, indent=0):
         }[node['type']]
 
         if node['type'] == 'nested':
-            value = format(node['children'], indent + 4)
+            value = format(node['children'], INDNT)
             lines.append(f'{spaces[2:]}{prefix} {key}: {value}')
         elif node['type'] == 'changed':
             lines.append(
-                f'{spaces[2:]}- {key}: {to_string(node['old_value'], indent + 4)}'
+                f'{spaces[2:]}- {key}: {to_string(node['old_value'], INDNT)}'
             )
             lines.append(
-                f'{spaces[2:]}+ {key}: {to_string(node['new_value'], indent + 4)}'
+                f'{spaces[2:]}+ {key}: {to_string(node['new_value'], INDNT)}'
             )
         else:
             lines.append(
-                f'{spaces[2:]}{prefix} {key}: {to_string(node['value'], indent + 4)}'
+                f'{spaces[2:]}{prefix} {key}: {to_string(node['value'], INDNT)}'
             )
     lines.append(' ' * indent + '}')
     return '\n'.join(lines)
